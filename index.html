@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <metacharset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <title>Dette er ikke min første nettside B)</title>
+    </head>
+    
+    <body align ="center" style="font-family: 'Raleway', sans-serif; background-color:#3498db">
+        <h1 align ="left">Min nettside</h1>
+            <div>
+                <button onclick="bytteFarge()" align ="right">Bytt farge</button>
+                <button onclick="getRandomColor()">den andre</button>
+            </div>
+        <p> Dette er et avsnitt</p>
+        <button onclick="main()">Trykk her</button>
+        <p id="brukersNavn"></p>
+        <pre>Hva skjer med denne gamle teksten</pre>
+        <h2>?</h2>
+        <time datetime="22.08.17">22. August 2017</time><br>
+        <img src="Ovelse_notepad/images/allure%202.jpg" width="480" height="350">
+        <br>
+        <a href="javascript:prank()">Dette er en link til vg</a> <br>
+        <a href="javascript:bs()">Dette er for bs</a>
+    </body>
+        
+        
+        
+        <script>
+            
+            var hex;
+            var tall1;
+            var tall2;
+            var svar;
+            var brukersNavn;
+            var navn;
+            
+            function bytteFarge() {
+                
+                document.body.style.backgroundColor = hex;
+            }
+            
+            function prank() {
+                
+                alert("jk, den fungerer ikke");
+            }
+            
+            function bs() {
+                
+                tall1 = Math.random(200) * 100;
+                tall2 = Math.random(100) * 100;
+                Math.round(tall1);
+                Math.round(tall2);
+                
+                
+                svar = tall1 + tall2;
+                
+                console.log(tall1, tall2, svar);
+                
+                if (svar === tall1 + tall2) {
+                    console.log("Regnet rett! Fordi: " + tall1 + " + " + " " + tall2 + " = " + " " + svar);
+                }else {
+                    console.log("regnet feil!");
+                }
+            }
+            
+            function main() {
+                
+                            
+            navn = prompt("Hva heter du?");
+                
+                
+                if (navn == "marco" || "Marco") {
+                    alert("ayy, mbm!!!");
+                }
+                
+                document.getElementById("brukersNavn").innerHTML = "Du heter " + navn + "...";
+            }
+            
+            
+            function getRandomColor () {
+                
+                var hex = Math.floor(Math.random() * 0xFFFFFF);
+                
+                return "#" + ("000000" + hex.toString(16)).substr(-6);
+}
+        
+        </script>
+
+        
+</html>
