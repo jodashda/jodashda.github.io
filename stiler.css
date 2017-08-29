@@ -1,0 +1,30 @@
+#overskrift {
+    
+    background-color: ;
+    color: black;
+    font-family: 'Raleway', sans-serif;;
+}
+
+#toppen {
+    
+     text-align: center;
+}
+
+html {
+    background: linear-gradient(rgba(211,211,211,1),rgba(211,211,211,0));
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#deme {
+    
+    color: green;
+}
