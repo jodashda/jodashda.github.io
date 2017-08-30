@@ -1,0 +1,60 @@
+#overskrift {
+    
+    margin: 100px;
+    text-align: center;
+    font-size: 70px;
+   // margin-left: 465px;
+}
+
+html {
+    
+    font-family: 'Raleway', sans-serif;
+}
+
+#bilde1 {
+    
+    align-content: center;
+}
+
+
+.bilde {
+align-items: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.innhold {
+    
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+#ingress {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+#brodtekst {
+    font-size: 35px;
+margin-top: -100px;
+    
+}
+a {
+    color: black;
+    text-decoration: underline;
+    
+}
+
+a:hover {
+    color: gray;
+}
