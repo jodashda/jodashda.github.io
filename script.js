@@ -69,7 +69,10 @@ function inputfunc(event) {
         document.getElementById("inputen").value = "";
         
         jsonen = JSON.stringify(arrayen);
+        console.log("json:"+jsonen);
         document.cookie = jsonen;
+        
+        console.log("cookie:"+document.cookie);
     }
 }
 
