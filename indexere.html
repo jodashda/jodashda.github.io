@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SJekk om du har vunnet på symboler</title>
+</head>
+<body>
+	<h1>Trykk for knappen for de symbolene du har:</h1>
+		<button>Nisse</button>
+		<button>Gave</button>
+		<button>Stjerne</button>
+		<button>Julekule</button>
+		<button>Krans</button>
+		<button>Bjelle</button>
+		<button>Snømann</button>
+		<button>Søfnugg</button>
+		<button>Tre</button>
+		<button>GodteriStang</button>
+<script type="text/javascript">
+	//22.12.17
+let knapper = document.getElementsByTagName('button');
+let symboler = [];
+let totaleSymboler = 0;
+var lagredeKnapper = [];
+var trykk = (evt) => {
+console.log("Trykket på " + evt.toElement.innerText);
+totaleSymboler++;
+	for(let i = 0; i < knapper.length; i++) {
+		if(knapper[i].innerText == evt.toElement.innerText) {
+			symboler[i]++;
+		}
+	}
+	if (totaleSymboler === 24) {
+	backupSymboler = symboler;
+	symboler = symboler.reverse();
+	document.write("<h1>Du har: </h1>");
+		for(let i = 0; i < lagredeKnapper.length; i++) {
+			document.write("<p>" + lagredeKnapper[i] + ": " + backupSymboler[i] + "</p>");
+		}
+	sjekkOmVant();
+	}
+}
+let vant = hva => {
+	alert("Gratulerer! Du vant på " + hva + " med " + backupSymboler[_i-3] + " av " + hva);
+	document.write("<h1>Gratulerer! Du vant på " + hva + "!");
+	document.body.style.backgroundColor = "green";
+}
+var _i;
+function sjekkOmVant() {
+	for(let i = 3; i < 13; i++) {
+		_i = i;
+		if(symboler[i-3] === i) {
+			console.log("vant med " + lagredeKnapper[i-3] + " fordi " + symboler[i-3] + " === " + i);
+			vant(lagredeKnapper[i-3]);
+		}else {
+			console.log("vant ikke med " + lagredeKnapper[i-3] + " fordi " + symboler[i-3] + " != "  + i);
+		}
+	}
+}
+(function start() {
+	for(let i = 0; i < knapper.length; i++) {
+		knapper[i].onclick = trykk;
+		symboler.push(0);
+		lagredeKnapper.push(knapper[i].innerText);
+	}
+})();
+</script>
+</body>
+</html>
